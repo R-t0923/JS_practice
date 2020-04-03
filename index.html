@@ -9,6 +9,14 @@
         height: 100px;
         background-color: skyblue;
         cursor: pointer;
+        transition: 0.8s;
+        /* アニメーションが０.8秒 */
+      }
+      .circle {
+        background: pink;
+        border-radius: 50%;
+        transform: rotate(360deg);
+        /* 回転が360度 */
       }
     </style>
   </head>
@@ -19,8 +27,9 @@
       'use strict';
 
       document.getElementById('target').addEventListener('click', () => {
-        document.getElementById('target').style.background = 'pink';
-        document.getElementById('target').style.borderRadius = '50%';
+        // document.getElementById('target').style.background = 'pink';
+        // document.getElementById('target').style.borderRadius = '50%';
+        document.getElementById('target').classList.add('circle');
       });
 
     </script>
